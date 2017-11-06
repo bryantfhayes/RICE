@@ -7,6 +7,24 @@ BHEngine::BHEngine() {
 csys_status BHEngine::init() {
   printf("Initializing game engine...\n");
 
+  // TEST CODE!
+
+  // Create and post message
+  Msg* msg = CreateNewMessage(eMsgType_Misc, "hello world!\n");
+  MessageBus* messageBus = new MessageBus;
+  messageBus->postMessage(msg);
+
+  // Pop off head message and read it
+  Msg* poppedMsg = messageBus->getFirstMessage();
+  if (poppedMsg != NULL)
+  {
+    printf("%s\n", poppedMsg->data);
+  }
+  else
+  {
+    printf("No data!\n");
+  }
+
   return csys_status_success;
 }
 

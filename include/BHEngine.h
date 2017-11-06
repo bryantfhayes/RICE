@@ -2,7 +2,8 @@
 #define BHENGINE_11032017
 
 #include "libtcod.hpp"
-#include "status.h"
+#include "Status.h"
+#include "MessageBus.h"
 
 class BHEngine {
 	public:

@@ -1,7 +1,7 @@
 SOURCES=$(wildcard src/*.cpp)
 OBJS=$(SOURCES:.cpp=.o)
 
-APP=rougelike
+APP=rougelike.o
 
 # compiler options : add debug information in debug mode
 # optimize speed and size in release mode
